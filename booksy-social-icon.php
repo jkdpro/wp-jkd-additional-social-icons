@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Booksy Social Icon
  * Description: Adds a Booksy service to the core Social Icons block (requires WordPress 6.9+).
- * Version: 1.0.0
+ * Version: 0.9.0
  * Requires at least: 6.9
  * Requires PHP: 7.4
  * License: GPL-2.0-or-later
