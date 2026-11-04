@@ -15,6 +15,6 @@ A WordPress plugin that adds Booksy and Freelancer.com options to the core Socia
 4. In the block editor, add or select a **Social Icons** block, click **+**, and choose **Booksy** or **Freelancer.com**.
 5. Add the profile URL for the selected service.
 
-## Placeholder icons
+## Icons
 
-Both icons are simple letter-shaped placeholders, not official brand artwork. Replace their SVG path data in `wp-jkd-additional-social-icons.php` with appropriately licensed, single-color logo paths if you have permission to use them.
+The Booksy icon uses the SVG provided by the site owner. The Freelancer.com icon is still a simple placeholder, not official brand artwork. Its SVG path is in `wp-jkd-additional-social-icons.php`.
