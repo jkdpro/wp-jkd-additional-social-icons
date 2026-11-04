@@ -2,7 +2,7 @@
 /**
  * Plugin Name: wp-jkd-additional-social-icons
  * Description: Adds Booksy and Freelancer.com options to the core Social Icons block.
- * Version: 0.9.1
+ * Version: 0.9.2
  * Requires at least: 6.9
  * Requires PHP: 7.4
  * License: GPL-2.0-or-later
@@ -15,16 +15,13 @@ const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
 		'viewBox' => '0 0 48 48',
 		'paths'   => array(
 			array(
-				'd'               => 'M24.158 14.829V27.5m0 0a5.671 5.671 0 1 1 5.67 5.67c-7.738 0-7.852-7.583-12.791-7.583c-4.25 0-4.537 3.273-4.537 3.273',
-				'fill'            => 'none',
-				'stroke'          => 'currentColor',
-				'strokeLinecap'   => 'round',
-				'strokeLinejoin'  => 'round',
+				'd'    => 'M38.5 5.5h-29a4 4 0 0 0-4 4v29a4 4 0 0 0 4 4h29a4 4 0 0 0 4-4v-29a4 4 0 0 0-4-4',
+				'fill' => '#000000',
 			),
 			array(
-				'd'               => 'M38.5 5.5h-29a4 4 0 0 0-4 4v29a4 4 0 0 0 4 4h29a4 4 0 0 0 4-4v-29a4 4 0 0 0-4-4',
+				'd'              => 'M24.158 14.829V27.5m0 0a5.671 5.671 0 1 1 5.67 5.67c-7.738 0-7.852-7.583-12.791-7.583c-4.25 0-4.537 3.273-4.537 3.273',
 				'fill'            => 'none',
-				'stroke'          => 'currentColor',
+				'stroke'          => '#ffffff',
 				'strokeLinecap'   => 'round',
 				'strokeLinejoin'  => 'round',
 			),
@@ -78,7 +75,7 @@ add_action(
 			$handle,
 			plugins_url( 'wp-jkd-additional-social-icons.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-primitives' ),
-			'0.9.1',
+			'0.9.2',
 			true
 		);
 		wp_add_inline_script(
