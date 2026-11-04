@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP JDK Additional Social Icons
+ * Plugin Name: wp-jkd-additional-social-icons
  * Description: Adds Booksy and Freelancer.com options to the core Social Icons block.
  * Version: 0.9.0
  * Requires at least: 6.9
@@ -34,10 +34,10 @@ add_filter(
 add_action(
 	'enqueue_block_editor_assets',
 	function () {
-		$handle = 'wp-jdk-additional-social-icons';
+		$handle = 'wp-jkd-additional-social-icons';
 		wp_enqueue_script(
 			$handle,
-			plugins_url( 'wp-jdk-additional-social-icons.js', __FILE__ ),
+			plugins_url( 'wp-jkd-additional-social-icons.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-primitives' ),
 			'0.9.0',
 			true
