@@ -17,7 +17,7 @@ const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
 			array(
 				'd'              => 'M24.158 14.829V27.5m0 0a5.671 5.671 0 1 1 5.67 5.67c-7.738 0-7.852-7.583-12.791-7.583c-4.25 0-4.537 3.273-4.537 3.273',
 				'fill'           => 'none',
-				'stroke'         => 'currentColor',
+				'stroke'         => '#ffffff',
 				'strokeWidth'    => '3',
 				'strokeLinecap'  => 'round',
 				'strokeLinejoin' => 'round',
@@ -80,6 +80,20 @@ add_action(
 			$handle,
 			'window.wpJdkAdditionalSocialIcons = ' . wp_json_encode( WP_JDK_ADDITIONAL_SOCIAL_ICONS ) . ';',
 			'before'
+		);
+	}
+);
+
+// Black background for the Booksy icon regardless of the block's colour settings.
+add_action(
+	'enqueue_block_assets',
+	function () {
+		$handle = 'wp-jkd-additional-social-icons-style';
+		wp_register_style( $handle, false, array(), '0.9.0' );
+		wp_enqueue_style( $handle );
+		wp_add_inline_style(
+			$handle,
+			'.wp-block-social-links .wp-social-link.wp-social-link-booksy{background-color:#000 !important;color:#fff !important;}'
 		);
 	}
 );
