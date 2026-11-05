@@ -18,3 +18,8 @@ A WordPress plugin that adds Booksy and Freelancer.com options to the core Socia
 ## Icons
 
 The Booksy icon uses the SVG provided by the site owner, rendered as a white line mark on a black background. These colours are fixed, regardless of the Social Icons block's colour settings. The Freelancer.com icon is still a simple placeholder, not official brand artwork. Its SVG path is in `wp-jkd-additional-social-icons.php`.
+
+## Logos
+Svg paths taken from the below resources and adjusted.
+- Booksy - to be done
+- Freelancer.com - https://worldvectorlogo.com/logo/freelancer-1
