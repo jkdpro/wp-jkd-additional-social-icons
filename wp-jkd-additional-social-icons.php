@@ -86,12 +86,21 @@ add_action(
 		);
 
 		$style_handle = 'wp-jkd-additional-social-icons-editor';
-		wp_register_style( $style_handle, false, array(), '0.9.0' );
+		wp_register_style( $style_handle, false, array(), (string) filemtime( __FILE__ ) );
 		wp_enqueue_style( $style_handle );
-		wp_add_inline_style(
-			$style_handle,
-			'.block-editor-block-variation-picker__variations .wp-jkd-social-icon-booksy path:first-child{display:none}.block-editor-block-variation-picker__variations .wp-jkd-social-icon-booksy path:not(:first-child){fill:none!important;stroke:#000!important}.block-editor-block-variation-picker__variations .wp-jkd-social-icon-freelancer path{fill:#000!important;stroke:none!important}'
+
+		// Monochrome icons in the "+" inserter and variation picker only; the canvas keeps its colours.
+		$scopes = array(
+			'.block-editor-block-types-list__item-icon',
+			'.block-editor-block-variation-picker__variations',
 		);
+		$css    = '';
+		foreach ( $scopes as $scope ) {
+			$css .= $scope . ' .wp-jkd-social-icon-booksy path:first-child{display:none}';
+			$css .= $scope . ' .wp-jkd-social-icon-booksy path:not(:first-child){fill:none!important;stroke:currentColor!important}';
+			$css .= $scope . ' .wp-jkd-social-icon-freelancer path{fill:currentColor!important;stroke:none!important}';
+		}
+		wp_add_inline_style( $style_handle, $css );
 	}
 );
 
