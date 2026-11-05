@@ -84,6 +84,14 @@ add_action(
 			'window.wpJdkAdditionalSocialIcons = ' . wp_json_encode( WP_JDK_ADDITIONAL_SOCIAL_ICONS ) . ';',
 			'before'
 		);
+
+		$style_handle = 'wp-jkd-additional-social-icons-editor';
+		wp_register_style( $style_handle, false, array(), '0.9.0' );
+		wp_enqueue_style( $style_handle );
+		wp_add_inline_style(
+			$style_handle,
+			'.block-editor-block-variation-picker__variations .wp-jkd-social-icon-booksy path:first-child{display:none}.block-editor-block-variation-picker__variations .wp-jkd-social-icon-booksy path:not(:first-child){fill:none!important;stroke:#000!important}.block-editor-block-variation-picker__variations .wp-jkd-social-icon-freelancer path{fill:#000!important;stroke:none!important}'
+		);
 	}
 );
 
