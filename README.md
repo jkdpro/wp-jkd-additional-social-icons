@@ -1,6 +1,12 @@
 # wp-jkd-additional-social-icons
 
-A WordPress plugin that adds Booksy and Freelancer.com options to the core Social Icons block.
+A WordPress plugin that adds additional social icons
+
+Current version: 0.9.1 (pre-release)
+
+Icons added:
+- Booksy
+- Freelancer
 
 ## Requirements
 
@@ -15,11 +21,7 @@ A WordPress plugin that adds Booksy and Freelancer.com options to the core Socia
 4. In the block editor, add or select a **Social Icons** block, click **+**, and choose **Booksy** or **Freelancer**.
 5. Add the profile URL for the selected service.
 
-## Icons
-
-The Booksy icon uses the SVG provided by the site owner, rendered as a white line mark on a black background. These colours are fixed, regardless of the Social Icons block's colour settings. The Freelancer.com icon is still a simple placeholder, not official brand artwork. Its SVG path is in `wp-jkd-additional-social-icons.php`.
-
 ## Logos
 Svg paths taken from the below resources and adjusted.
-- Booksy - to be done
-- Freelancer.com - https://worldvectorlogo.com/logo/freelancer-1
+- Booksy - https://svgicons.com/icon/2627/booksy
+- Freelancer.com - https://thesvg.org/icon/freelancer
