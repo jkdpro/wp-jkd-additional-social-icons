@@ -76,7 +76,7 @@ add_action(
 			$handle,
 			plugins_url( 'wp-jkd-additional-social-icons.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-primitives' ),
-			'0.9.0',
+			(string) filemtime( __DIR__ . '/wp-jkd-additional-social-icons.js' ),
 			true
 		);
 		wp_add_inline_script(
