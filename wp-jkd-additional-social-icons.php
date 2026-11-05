@@ -2,13 +2,17 @@
 /**
  * Plugin Name: wp-jkd-additional-social-icons
  * Description: Adds Booksy and Freelancer.com options to the core Social Icons block.
- * Version: 0.9.0
+ * Version: 0.9.1
  * Requires at least: 6.9
  * Requires PHP: 7.4
  * License: GPL-2.0-or-later
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$wp_jkd_asi_plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), 'plugin' );
+define( 'WP_JKD_ASI_VERSION', $wp_jkd_asi_plugin_data['Version'] );
+unset( $wp_jkd_asi_plugin_data );
 
 const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
 	'booksy' => array(
@@ -76,7 +80,7 @@ add_action(
 			$handle,
 			plugins_url( 'wp-jkd-additional-social-icons.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-primitives' ),
-			(string) filemtime( __DIR__ . '/wp-jkd-additional-social-icons.js' ),
+			WP_JKD_ASI_VERSION,
 			true
 		);
 		wp_add_inline_script(
@@ -86,7 +90,7 @@ add_action(
 		);
 
 		$style_handle = 'wp-jkd-additional-social-icons-editor';
-		wp_register_style( $style_handle, false, array(), (string) filemtime( __FILE__ ) );
+		wp_register_style( $style_handle, false, array(), WP_JKD_ASI_VERSION );
 		wp_enqueue_style( $style_handle );
 
 		// Monochrome icons in the "+" inserter and variation picker only; the canvas keeps its colours.
@@ -110,7 +114,7 @@ add_action(
 	'enqueue_block_assets',
 	function () {
 		$handle = 'wp-jkd-additional-social-icons-style';
-		wp_register_style( $handle, false, array(), '0.9.0' );
+		wp_register_style( $handle, false, array(), WP_JKD_ASI_VERSION );
 		wp_enqueue_style( $handle );
 		wp_add_inline_style(
 			$handle,
