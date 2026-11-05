@@ -88,6 +88,7 @@ add_action(
 );
 
 // Black background for the Booksy icon regardless of the block's colour settings.
+/*
 add_action(
 	'enqueue_block_assets',
 	function () {
@@ -100,3 +101,4 @@ add_action(
 		);
 	}
 );
+*/
