@@ -11,20 +11,23 @@
 defined( 'ABSPATH' ) || exit;
 
 const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
-	'booksy'     => array(
-		'viewBox' => '0 0 48 48',
+	'booksy' => array(
+		'viewBox' => '0 0 24 24',
 		'paths'   => array(
 			array(
-				'd'              => 'M24.158 14.829V27.5m0 0a5.671 5.671 0 1 1 5.67 5.67c-7.738 0-7.852-7.583-12.791-7.583c-4.25 0-4.537 3.273-4.537 3.273',
-				'fill'           => 'none',
-				'stroke'         => '#ffffff',
-				'strokeWidth'    => '3',
-				'strokeLinecap'  => 'round',
-				'strokeLinejoin' => 'round',
-				'transform'      => 'translate(-5.04 -5.04) scale(1.21)',
+				'd' => 'M21.3525 0.0675h-18.705a2.58 2.58 0 0 0-2.58 2.58v18.705a2.58 2.58 0 0 0 2.58 2.58h18.705a2.58 2.58 0 0 0 2.58-2.58v-18.705a2.58 2.58 0 0 0-2.58-2.58',
+				'fill' => '#000000',
+			),
+			array(
+				'd'              => 'M12.1027 6.03885V14.275m0 0a3.68615 3.68615 0 1 1 3.6855 3.6855c-5.0297 0-5.1038-4.92995-8.31415-4.92995c-2.7625 0-2.94905 2.12745-2.94905 2.12745',
+				'fill'            => 'none',
+				'stroke'          => '#ffffff',
+				'strokeWidth'     => 1.2,
+				'strokeLinecap'   => 'round',
+				'strokeLinejoin'  => 'round',
 			),
 		),
-	),
+	),	
 	'freelancer' => array(
 		'viewBox' => '0 0 24 24',
 		'paths'   => array(
