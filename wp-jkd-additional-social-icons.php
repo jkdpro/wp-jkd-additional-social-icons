@@ -27,7 +27,7 @@ const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
 				'strokeLinejoin'  => 'round',
 			),
 		),
-	),	
+	),
 	'freelancer' => array(
 		'viewBox' => '0 0 24 24',
 		'paths'   => array(
