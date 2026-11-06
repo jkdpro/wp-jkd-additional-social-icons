@@ -36,8 +36,7 @@ const WP_JDK_ADDITIONAL_SOCIAL_ICONS = array(
 		'viewBox' => '0 0 24 24',
 		'paths'   => array(
 			array(
-				'd'    => 'M14.096 3.076l1.634 2.292L24 3.076M5.503 20.924l4.474-4.374-2.692-2.89m6.133-10.584L11.027 5.23l4.022.15M4.124 3.077l.857 1.76 4.734.294m-3.058 7.072l3.497-6.522L0 5.13m7.064 7.485l3.303 3.548 3.643-3.57 1.13-6.652-4.439-.228Z',
-				'fill' => 'currentColor',
+				'd' => 'M14.096 3.076l1.634 2.292L24 3.076M5.503 20.924l4.474-4.374-2.692-2.89m6.133-10.584L11.027 5.23l4.022.15M4.124 3.077l.857 1.76 4.734.294m-3.058 7.072l3.497-6.522L0 5.13m7.064 7.485l3.303 3.548 3.643-3.57 1.13-6.652-4.439-.228Z',
 			),
 		),
 	),
@@ -102,24 +101,23 @@ add_action(
 		foreach ( $scopes as $scope ) {
 			$css .= $scope . ' .wp-jkd-social-icon-booksy path:first-child{display:none}';
 			$css .= $scope . ' .wp-jkd-social-icon-booksy path:not(:first-child){fill:none!important;stroke:currentColor!important}';
-			$css .= $scope . ' .wp-jkd-social-icon-freelancer path{fill:currentColor!important;stroke:none!important}';
 		}
 		wp_add_inline_style( $style_handle, $css );
 	}
 );
 
-// Black background for the Booksy icon regardless of the block's colour settings.
-/*
+// Brand colours, mirroring core's socials-with-bg / socials-without-bg mixins.
+// :where() keeps specificity at zero so block-level icon colours still win.
 add_action(
 	'enqueue_block_assets',
 	function () {
-		$handle = 'wp-jkd-additional-social-icons-style';
+		$handle = 'wp-jkd-additional-social-icons-colors';
 		wp_register_style( $handle, false, array(), WP_JKD_ASI_VERSION );
 		wp_enqueue_style( $handle );
 		wp_add_inline_style(
 			$handle,
-			'.wp-block-social-links .wp-social-link.wp-social-link-booksy{background-color:#000 !important;color:#fff !important;}'
+			':where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-freelancer{background-color:#29b2fe;color:#fff}' .
+			':where(.wp-block-social-links.is-style-logos-only) .wp-social-link-freelancer{color:#29b2fe}'
 		);
 	}
 );
-*/
