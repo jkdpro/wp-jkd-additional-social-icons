@@ -2,7 +2,7 @@
 
 A WordPress plugin that adds additional social icons
 
-Current version: 0.9.1 (pre-release)
+Current version: 0.9.2 (pre-release)
 
 Icons added:
 - Booksy
